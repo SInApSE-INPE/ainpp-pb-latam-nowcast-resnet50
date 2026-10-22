@@ -1,0 +1,11 @@
+services:
+  resnet50:
+    build: .
+    image: resnet50-nowcast:local
+    restart: unless-stopped
+    stop_grace_period: 20m
+    user: "${RESNET50_UID:?Set RESNET50_UID to your host user ID}:${RESNET50_GID:?Set RESNET50_GID to your host group ID}"
+    env_file: .env
+    volumes:
+      - ./artifacts/v1:/app/artifacts/v1
+      - ./outputs:/app/outputs
