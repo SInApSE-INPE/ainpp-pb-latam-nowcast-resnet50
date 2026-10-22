@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "version": "v1",
-  "download_base_url": "https://ftp.cptec.inpe.br/rainfall/ainpp-pb-latam/checkpoints/resnet50/v1/",
+  "download_base_url": "https://ainpp-pb-latam-nowcasting-checkpoints.s3.us-east-2.amazonaws.com/",
   "model": "ResNet50",
   "architecture": {
     "encoder": "torchvision_resnet50",
@@ -17,7 +17,7 @@
     "sha256": "2b09f2d87ea314e2d83452e774f753874d95f759156e0e6e687a382f77263a02"
   },
   "training_args": {
-    "zarr_path": "/prj/ideeps/adriano.almeida/data/ainpp/legacy/gsmap_nrt+mvk_log_zscore_ainpp-latin-america.zarr",
+    "zarr_path": "",
     "region": "ainpp-latin-america",
     "patch_size": 320,
     "patch_stride": 160,
